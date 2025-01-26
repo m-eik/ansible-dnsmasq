@@ -4,4 +4,4 @@
   ansible.builtin.service:
     name: dnsmasq
     state: restarted
-  when: service_default_state | default('started') == 'started'
+  when: dnsmasq_service_enabled | default('started') == 'started'
